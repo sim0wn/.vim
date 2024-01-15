@@ -1,0 +1,3 @@
+[submodule "pack/syntax/start/python-synthax.vim"]
+	path = pack/syntax/start/python-synthax.vim
+	url = https://github.com/vim-python/python-syntax
