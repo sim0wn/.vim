@@ -1,3 +1,6 @@
 [submodule "pack/syntax/start/python-synthax.vim"]
 	path = pack/syntax/start/python-synthax.vim
 	url = https://github.com/vim-python/python-syntax
+[submodule "pack/plugins/start/emmet"]
+	path = pack/plugins/start/emmet
+	url = https://github.com/mattn/emmet-vim.git
