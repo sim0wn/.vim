@@ -7,3 +7,7 @@ set expandtab
 
 " Highlighting
 let b:python_highlight_all = 1
+
+" Linting and fixing
+let b:ale_fixers = ['ruff']
+let b:ale_linters = ['ruff']
