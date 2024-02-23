@@ -130,15 +130,21 @@ endif
 
 " User preferences
 
-" Netrw
+"" Use Unix file format
+set fileformat=unix
+
+"" Filetype based indentation
+filetype plugin indent on
+
+"" Netrw
 let g:netrw_keepdir = 0
 let g:netrw_winsize = 35
 let g:netrw_banner = 0
 
-" Whitespace
+"" Whitespace
 set list listchars=multispace:•,trail:.,precedes:<,extends:>
 
-" Colorscheme
+"" Colorscheme
 colorscheme onedark
 if (has("nvim"))
   "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
@@ -154,24 +160,20 @@ endif
 set cursorline
 set number      " Add numbers to each line on the left-hand side.
 
-" Indenting "
+"" Indenting
 set shiftwidth=2
 set tabstop=2
+set softtabstop=2
 set expandtab
-set smartindent
+set autoindent
 
-" Syntax Highlight
-let g:python_highlight_all = 1
-
-" ALE "
+"" ALE
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \ '*': ['remove_trailing_lines', 'trim_whitespace'],
 \ 'php': ['php_cs_fixer'],
-\ 'python': ['ruff'],
 \ 'json': ['jq']
 \}
 let g:ale_linters = {
-\ 'python': ['ruff']
+\ 'xml': ['xmllint']
 \}
-let g:ale_python_ruff_options = ''
