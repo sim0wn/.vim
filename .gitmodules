@@ -1,6 +1,9 @@
-[submodule "pack/syntax/start/python-synthax.vim"]
-	path = pack/syntax/start/python-synthax.vim
-	url = https://github.com/vim-python/python-syntax
+[submodule "pack/plugins/start/ale"]
+  path = pack/plugins/start/ale
+  url = https://github.com/dense-analysis/ale.git
 [submodule "pack/plugins/start/emmet"]
-	path = pack/plugins/start/emmet
-	url = https://github.com/mattn/emmet-vim.git
+  path = pack/plugins/start/emmet
+  url = https://github.com/mattn/emmet-vim.git
+[submodule "pack/syntax/start/python-synthax.vim"]
+  path = pack/syntax/start/python-synthax.vim
+  url = https://github.com/vim-python/python-syntax
