@@ -7,3 +7,12 @@
 [submodule "pack/syntax/start/python-synthax.vim"]
   path = pack/syntax/start/python-synthax.vim
   url = https://github.com/vim-python/python-syntax
+[submodule "pack/plugins/start/awesome-vim-colorschemes"]
+	path = pack/plugins/start/awesome-vim-colorschemes
+	url = https://github.com/rafi/awesome-vim-colorschemes.git
+[submodule "pack/plugins/start/airline"]
+	path = pack/plugins/start/airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "pack/plugins/start/commentary"]
+	path = pack/plugins/start/commentary
+	url = https://github.com/tpope/vim-commentary.git

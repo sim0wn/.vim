@@ -133,46 +133,50 @@ endif
 "" Use Unix file format
 set fileformat=unix
 
-"" Filetype based indentation
+"" Indentation
 filetype plugin indent on
-
-"" Netrw
-let g:netrw_keepdir = 0
-let g:netrw_winsize = 35
-let g:netrw_banner = 0
-
-"" Whitespace
-set list listchars=multispace:•,trail:.,precedes:<,extends:>
-
-"" Colorscheme
-colorscheme onedark
-if (has("nvim"))
-  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-endif
-"For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
-"Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
-" < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
-if (has("termguicolors"))
-  set termguicolors
-endif
-
-set cursorline
-set number      " Add numbers to each line on the left-hand side.
-
-"" Indenting
 set shiftwidth=2
 set tabstop=2
 set softtabstop=2
 set expandtab
 set autoindent
 
+"" Netrw preferences
+let g:netrw_keepdir = 0
+let g:netrw_winsize = 35
+let g:netrw_banner = 0
+
+"" Trailing whitespace hints
+set list listchars=multispace:•,trail:.,precedes:<,extends:>
+
+"" Colorscheme
+colorscheme onedark
+if (has("nvim"))
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
+if (has("termguicolors"))
+  set termguicolors
+endif
+
+"" UI
+set cursorline
+set number      " Add numbers to each line on the left-hand side.
+
+"" Concealing
+set conceallevel=1
+syntax match div "//" conceal cchar=÷
+syntax match mul "*" conceal cchar=×
+syntax match eq "==" conceal cchar=≣
+syntax match neq "!=" conceal cchar=≠
+syntax match gteq ">=" conceal cchar=≥
+syntax match lteq "<=" conceal cchar=≤
+syntax match cons "::" conceal cchar=∷
+syntax match arrow "->" conceal cchar=→
+
 "" ALE
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \ '*': ['remove_trailing_lines', 'trim_whitespace'],
-\ 'php': ['php_cs_fixer'],
-\ 'json': ['jq']
 \}
 let g:ale_linters = {
 \ 'xml': ['xmllint']
